@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürpriz Haftası Planlayıcısı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fef6e4;
+            color: #2b2d42;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #e63946;
+            border-radius: 15px;
+            background-color: #edf2f4;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #e63946;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border: 1px solid #2b2d42;
+            border-radius: 5px;
+            width: 80%;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e63946;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d62839;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f8f9fa;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎄 Yılbaşı Sürpriz Haftası 🎄</h1>
+        <p>Sürprizlere ulaşmak için aşağıdaki alana kodu giriniz:</p>
+        <input type="password" id="codeInput" placeholder="Kodu buraya giriniz">
+        <button id="checkCode">Sürprizleri Gör</button>
+        <div id="surprises" class="hidden">
+            <h2>Sürpriz Haftası Programı</h2>
+            <ul>
+                <li><strong>26 Aralık:</strong> Sürpriz planı web sitesi</li>
+                <li><strong>27 Aralık:</strong> Çok istediğin bir şey</li>
+                <li><strong>28 Aralık:</strong> Söylediğim bir şey</li>
+                <li><strong>29 Aralık:</strong> Müzik ile ilgili bir şey</li>
+                <li><strong>30 Aralık:</strong> İnfosuz sürpriz</li>
+                <li><strong>31 Aralık:</strong> Bileklikle alakalı sürpriz</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById('checkCode').addEventListener('click', function() {
+            const codeInput = document.getElementById('codeInput').value;
+            if (codeInput === 'seni çok seviyorum') {
+                document.getElementById('surprises').classList.remove('hidden');
+            } else {
+                alert('Hatalı kod. Lütfen tekrar deneyin.');
+            }
+        });
+    </script>
+</body>
+</html>
